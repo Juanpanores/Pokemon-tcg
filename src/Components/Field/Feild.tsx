@@ -1,5 +1,4 @@
 import { CardType } from "@/app/page.container";
-import Hand from "../CardList/CardList";
 import { Box } from "@mui/material";
 import Card from "../Card/Card";
 
