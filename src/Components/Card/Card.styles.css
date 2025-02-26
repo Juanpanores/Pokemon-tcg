@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply bg-white shadow-lg rounded-lg border border-gray-300 flex flex-col justify-end ;
+}
+
+.card__responsive{
+  @apply  max-w-28 sm:max-w-36 md:max-w-44 lg:max-w-52 sm:h-56 md:h-60 lg:h-64 xl:h-72
+}
+
+.card__image {
+  @apply w-full h-[100%] object-cover;
+}
+
+.card__content {
+  @apply p-1 m-1 rounded-md border border-gray-400  ;
+}
+
+.card__title {
+  @apply text-lg sm:text-xl font-bold mb-2 text-black;
+}
+
+.card__description {
+  @apply text-gray-600 text-xs sm:text-sm mb-4;
+}
+
+.card__stats {
+  @apply flex justify-between text-xs sm:text-sm font-semibold;
+}
+
+.card__stats--attack {
+  @apply text-red-500;
+}
+
+.card__stats--defense {
+  @apply text-blue-500;
+}
+
+.card--hover {
+  @apply  transition-all duration-300 z-0;
+}
+
+.card--hover:hover {
+  @apply z-10 scale-110 cursor-pointer;
+}

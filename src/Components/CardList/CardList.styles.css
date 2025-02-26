@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hand{
+  @apply flex justify-center;
+  .card {
+    @apply -mx-7;
+  }
+}

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.deckgrow {
+  @apply transition-all duration-200 ease-in-out hover:scale-110 rounded-lg w-52 ;
+}
+
+.deck{
+  @apply max-h-full;
+}

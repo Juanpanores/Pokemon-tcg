@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-image {
+  @apply bg-cover bg-no-repeat flex flex-col h-screen p-4;
+  background-image: url('https://wallpapers.com/images/high/pokemon-stadium-1920-x-1080-wallpaper-zvfl8gktsa5al88m.webp');
+}
+
+.header {
+  @apply text-4xl font-bold pt-4 text-center;
+}
+
+.title {
+  @apply col-span-8 row-span-1 mb-0;
+}
+
+.sub-header{
+  @apply text-2xl text-center;
+} 
+
+.fixed-box {
+  @apply p-4 bg-gray-300;
+}
+
+.board__field {
+  @apply flex-grow p-4 flex flex-col justify-end;
+}
+
+.board__field-flex {
+  @apply flex justify-between items-center
+}
+
+.victory {
+  @apply fixed inset-0 flex items-center justify-center;
+  @apply text-9xl font-bold text-yellow-400;
+  @apply animate-fadeIn scale-0 animate-scaleUp;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.5); }
+  to { transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out forwards; /* 'forwards' keeps the final state */
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.8s ease-out forwards;
+}
+
+/* Optional Glow Effect */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+  50% { text-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+  100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+}
+
+.glow-effect {
+  animation: glow 1.5s infinite alternate;
+}
+
+
+
+

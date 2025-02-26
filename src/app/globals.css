@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./page.css');
+@import url('../Components/Card/Card.styles.css');
+@import url('../Components/Deck/Deck.styles.css');
+@import url('../Components/CardList/CardList.styles.css');
+@import url('../Components/Field/Field.styles.css');
+@import url('../Components/Graveyard/Graveyard.styles.css');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-content {
+  @apply flex justify-center align-middle;
+}
+

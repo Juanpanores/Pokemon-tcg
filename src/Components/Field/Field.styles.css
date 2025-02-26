@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.field {
+  @apply relative flex justify-center items-center h-[100%] mb-4;
+}
+
+.field__battlefield{
+  @apply border border-gray-400 flex justify-center items-center rounded-2xl p-5
+}
+
+.field__empty-card{
+  @apply min-w-28 sm:min-w-36 md:min-w-44 lg:min-w-52 sm:h-56 md:h-60 lg:h-64 xl:h-72;
+}
