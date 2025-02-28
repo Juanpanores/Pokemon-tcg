@@ -59,24 +59,25 @@ const usePageContainer = () => {
   }
 
   const onPickFighter = (card: CardType) => { 
-    if (fighter.length<2 ) {                        
+    if (fighter.length<2 ) {
     setFighter([...fighter, card]);
     setHand(hand.filter((e) => e !== card));
     }
   }
 
   const onPickUpCard = () => {
-    if (deck.length>0)  {                   
-      let pickup=5-hand.length; 
-      if (pickup> deck.length){           
+    if (deck.length>0) {
+      let pickup=5-hand.length;
+      if (pickup> deck.length){
         pickup= deck.length
       }
-      setHand(hand.concat(deck.slice(0,pickup)));
+
+      setHand(hand.concat(deck.slice(0,pickup)))
+
       deck.splice(0,pickup) 
       setDeck(deck);
     }
   }
-
 
   useEffect(() => {
     fetchPokemons()
@@ -109,7 +110,7 @@ const usePageContainer = () => {
     graveyard,
     deck,
     onPickUpCard,
-    onPickFighter
+    onPickFighter,
   }
 }
 

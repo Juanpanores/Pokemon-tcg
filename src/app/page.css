@@ -38,6 +38,18 @@
   @apply animate-fadeIn scale-0 animate-scaleUp;
 }
 
+.header--winer {
+  @apply flex items-center justify-center;
+  @apply text-4xl font-bold text-yellow-400;
+  @apply animate-fadeIn scale-0 animate-scaleUp;
+}
+
+.header--loser {
+  @apply flex items-center justify-center;
+  @apply text-4xl font-bold text-red-400;
+  @apply animate-fadeIn scale-0 animate-scaleUp;
+}
+
 /* Custom Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
