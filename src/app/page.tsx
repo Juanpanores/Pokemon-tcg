@@ -5,7 +5,7 @@ import Field from "@/Components/Field/Field";
 import Graveyard from "@/Components/Graveyard/Graveyard";
 import Hand from "@/Components/CardList/CardList";
 import { Box } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { usePageContainer } from "./page.container";
 
 

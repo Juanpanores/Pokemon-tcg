@@ -30,7 +30,7 @@ const usePageContainer = () => {
       const data = await response.json();
   
       const pokemons = await Promise.all(
-        data.results.map(async (pokemon: any) => {
+        data.results.map(async (pokemon: Awaited<ReturnType<typeof data.results>>) => {
           const res = await fetch(pokemon.url);
   
           if (!res.ok) {
@@ -42,7 +42,7 @@ const usePageContainer = () => {
           return {
             name: details.name.charAt(0).toUpperCase() + details.name.slice(1),
             image: details.sprites.front_default,
-            description: details.types.map((t: any) => t.type.name).join(", "),
+            description: details.types.map((t: Awaited<ReturnType<typeof details.types>>) => t.type.name).join(", "),
             attack: details.stats[1].base_stat,
             defense: details.stats[2].base_stat,
           };
